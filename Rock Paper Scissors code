@@ -31,7 +31,9 @@ while P1C<3 and P2C<3:
         print("Player 2 wins!")
     else: 
         print("Invalid input, you have not entered rock, paper or scissors, try again")
-    
+
+    print(Player1, "has won", P1C, "games")
+    print(Player2, "has won", P2C, "games")
     
     if P1C==3:
         print( Player1,"\033[35m", "wins the overall game!", "\033[0m")
@@ -39,3 +41,4 @@ while P1C<3 and P2C<3:
     elif P2C==3:
         print(Player2,"\033[35m", "wins the overall game!","\033[0m")
         exit()
+    
