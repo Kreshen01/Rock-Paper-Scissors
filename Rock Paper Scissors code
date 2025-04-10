@@ -1,0 +1,42 @@
+Player1 = input("Player 1, enter your name: ")
+Player2 = input("Player 2, enter your name: ")
+P1C = 0
+P2C = 0
+from getpass import getpass as input
+while P1C<3 and P2C<3:
+    print(Player1)
+    P1T= input ("enter your move, R,P or S:")
+    print(Player2)
+    P2T= input ("enter your move, R,P or S:")
+    if P1T == P2T:
+        print("It's a tie!")
+    elif (P1T=="R" or P1T== "r") and (P2T=="S" or P2T=="s"):
+        print("Rock beats Scissors","\033[32m",Player1, "WINS!" , "\033[0m")
+        P1C+=1
+    elif P1T=="P"and P2T=="R":
+        print ("Paper beats Rock","\033[32m", Player1, "WINS!", "\033[0m")
+        P1C+=1
+    elif (P1T=="S"or P1T=="s") and (P2T=="P" or P2T=="p"):
+        print("Scissors beats Paper", "\033[32m",Player1,"WINS!", "\033[0m")
+        P1C+=1
+    elif (P2T=="R" or P2T == "r") and (P1T=="S" or P1T=="s"):
+        print("Rock beats Scissors", "\033[32m",Player2, "WINS!", "\033[0m")    
+        P2C+=1
+    elif (P2T=="P" or P2T== "p") and (P1T=="R" or P1T=="r"):
+        print("Paper beats Rock","\033[32m",Player2, "WINS!", "\033[0m")
+        P2C+=1
+    elif (P2T=="S" or P2T=="s") and (P1T=="P" or P1T=="p"):
+        print("Scissors beats Paper","\033[32m",Player2, "WINS!", "\033[0m")
+        P2C+=1
+        print("Player 2 wins!")
+    else: 
+        print("Invalid input, you have not entered rock, paper or scissors, try again")
+    
+    
+    if P1C==3:
+        print("Player 1 winS the overall game!")
+        exit()
+    elif P2C==3:
+        print("Player 2 wins the overall game!")
+        exit()
+    
