@@ -34,7 +34,7 @@ while P1C<3 and P2C<3:
     
     
     if P1C==3:
-        print("Player 1 winS the overall game!")
+        print("Player 1 wins the overall game!")
         exit()
     elif P2C==3:
         print("Player 2 wins the overall game!")
